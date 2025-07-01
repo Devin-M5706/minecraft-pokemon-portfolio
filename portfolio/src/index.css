@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .pixel-border {
+    @apply border-2 border-white shadow-lg;
+    image-rendering: pixelated;
+  }
+  
+  .minecraft-block {
+    @apply bg-gradient-to-br from-minecraft-grass to-green-600;
+    box-shadow: 
+      inset 2px 2px 0 rgba(255,255,255,0.3),
+      inset -2px -2px 0 rgba(0,0,0,0.3);
+  }
+  
+  .pokemon-card {
+    @apply bg-gradient-to-br from-pokemon-red to-pokemon-yellow rounded-lg p-4;
+    box-shadow: 0 8px 32px rgba(255, 0, 0, 0.3);
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(79, 195, 247, 0.8);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4FC3F7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #29B6F6;
+} 
